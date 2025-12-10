@@ -1,5 +1,7 @@
-x = int(1)
-x = float(1.5)
+age = input("Введите возраст: ")
+ageInt = int(age)
 
-PI = 3.14
-print(x)
+if ageInt >= 18 and ageInt < 50:
+	print(True)
+else:
+	print(False)
