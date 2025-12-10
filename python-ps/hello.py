@@ -1,7 +1,20 @@
-age = input("Введите возраст: ")
-ageInt = int(age)
+role = input("Введите роль: ")
 
-if ageInt >= 18 and ageInt < 50:
-	print(True)
+if role == "admin":
+    print("Админ")
+elif role == "manager":
+    print("Менеджер")
+elif role == "seo":
+    print("SEO специалист")
 else:
-	print(False)
+    print("Пользователь")
+
+match role:
+    case "admin":
+        print("Админ")
+    case "manager":
+        print("Менеджер")
+    case "seo":
+        print("SEO специалист")
+    case _:
+        print("Пользователь")
