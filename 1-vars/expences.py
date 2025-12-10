@@ -7,5 +7,7 @@ transportation = int(transportationStr)
 entertainment = int(entertainmentStr)
 
 result = food + transportation + entertainment
+result_3 = result / 3
 
 print(result)
+print(result_3)
