@@ -43,4 +43,4 @@ if result is None:
 else:
     rub, cop = result
     total = rub + cop
-    print(f"{total:.2f}")
+    print(f"{total:.2f} ₽")
