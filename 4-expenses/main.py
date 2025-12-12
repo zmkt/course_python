@@ -1,10 +1,8 @@
-numbers = [1, 2, 3, 4, 5, 6, 7]
+number = input("Введите число: ")
 
-summ = sum(numbers)
-minim = min(numbers)
-maxim = max(numbers)
-common = summ / len(numbers)
+rub, _, cop, _ = number.strip().split(" ")
+rub = float(rub)
+cop = int(cop) / 100
+total = rub + cop
 
-res = minim, maxim, summ
-
-print(res)
+print(f"{total:.2f} ₽")
