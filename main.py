@@ -1,4 +1,14 @@
-for i in range(1, 11):
-    for j in range(1, 11):
-        print(f"{i*j:4}", end="")
-    print( )
+def print_hello(user_name: str):
+    print(f"Hello, {user_name}")
+
+
+print_hello("Илья")
+
+
+def multiply(a: int, b: int):
+    return a * b
+
+
+res = multiply(4, 5)
+
+print(res)
