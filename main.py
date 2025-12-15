@@ -1,17 +1,14 @@
-floor = int(input("Введите номер этажа: "))
+import random
 
-match floor:
-    case -1:
-        print("Подвал: здесь находится склад")
-    case 1:
-        print("Холл и ресепшен")
-    case 10:
-        print("Технический этаж - вход запрещен")
-    case _:
-        print("Такого этажа нет")
+secret_number = random.randint(0, 99)
 
-if 1 < floor < 10:
-    if floor % 2 == 0:
-        print("Четный этаж")
-    else:
-        print("Нечетный этаж")
+number = int(input("Введите число: "))
+
+while secret_number != number:
+    if secret_number > number:
+        print("Больше")
+    elif secret_number < number:
+        print("Меньше")
+    number = int(input("Введите число: "))
+
+print("Угадал")
