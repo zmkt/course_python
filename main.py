@@ -1,14 +1,12 @@
-def print_hello(user_name: str):
-    print(f"Hello, {user_name}")
+from random import choice
 
 
-print_hello("Илья")
+def genPass(length: int, arrayel: str):
+    res = ''
+    for _ in range(length):
+        res += choice(arrayel)
+
+    return res
 
 
-def multiply(a: int, b: int):
-    return a * b
-
-
-res = multiply(4, 5)
-
-print(res)
+print(genPass(50, 'qwertyuQWERTY'))
