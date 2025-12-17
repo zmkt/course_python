@@ -1,12 +1,24 @@
-from random import choice
+import random
+import string
 
 
-def genPass(length: int, arrayel: str):
-    res = ''
-    for _ in range(length):
-        res += choice(arrayel)
+def generate_password(length: int = 8, use_symbols: bool = True):
+    if length < 3:
+        return ""
+    letters = string.ascii_letters
+    digint = string.digits
+    symbols = "!@#$%&*?"
 
-    return res
+    pool = letters + digint + (symbols if use_symbols else "")
+
+    password_chars: list[str] = []
+
+    while len(password_chars) < length:
+        password_chars.append(random.choice(pool))
+
+    return "".join(password_chars)
 
 
-print(genPass(50, 'qwertyuQWERTY'))
+print(generate_password())
+print(generate_password(10, False))
+print(generate_password(10))
