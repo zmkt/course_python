@@ -1,8 +1,7 @@
 import random
 import string
-from typing import Dict
 
-passwords: Dict[str, str] = {}
+passwords: dict[str, str] = {}
 
 
 def generate_password(length: int = 8, use_symbols: bool = True):
@@ -26,7 +25,10 @@ def generate_password(length: int = 8, use_symbols: bool = True):
 
 
 def show_passwords():
-    print(passwords)
+    print("Key".ljust(10), "|", "Value")
+    print("-"*40)
+    for key, password in passwords.items():
+        print(key.ljust(20), "|", password)
 
 
 def add_password():
