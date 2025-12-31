@@ -30,6 +30,7 @@ def main():
             print("\n Завершение приложения")
             break
 
+
 if __name__ == "__main__":
     print(make_task(1, "test", "low"))
     main()
